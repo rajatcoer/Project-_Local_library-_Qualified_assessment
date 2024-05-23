@@ -8,7 +8,9 @@ function getTotalAccountsCount(accounts) {
 
 function getBooksBorrowedCount(books) {
   // Filtered books which have atleast 1 book with returned set to false and returned their count.
-  return books.filter((book) => (book.borrows.filter((borrow) => !(borrow.returned))).length > 0).length;
+  return books.filter((book) => 
+    (book.borrows.filter((borrow) => !(borrow.returned))).length > 0
+  ).length;
 }
 
 // Tbis is a helper function that's called by other functions inside this file. You don't have to edit it.
